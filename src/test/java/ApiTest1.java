@@ -9,6 +9,7 @@ public class ApiTest1 {
         Response response = RestAssured.get("https://reqres.in/api/users?page=2");
         System.out.println("Status Code :"+response.getStatusCode());
         System.out.println("Response :"+response.asString());
+        System.out.println("Body"+response.getBody().prettyPrint());
     }
 
 }
